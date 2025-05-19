@@ -11,7 +11,7 @@ ANSWERS_FILE = "answers.csv"
 
 @st.cache_data
 def load_questions():
-    df = pd.read_csv(QUESTIONS_FILE)
+    df = pd.read_csv(QUESTIONS_FILE, encoding="utf-8")
     return df
 
 def get_random_questions(df, num_questions=10):
